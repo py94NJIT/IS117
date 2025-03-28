@@ -46,6 +46,12 @@ section li {
 a:focus, a:hover {
 	font-style: italic;
 }
+h1{
+	font-size: 150%;
+	padding-top: 0.5em;
+	padding-bottom: 0.25em;
+	margin: 0, 0, 0, 0;
+}
 /* the styles for the header */
 header {
 	padding: 1.5em 0 2em 0;
@@ -89,6 +95,10 @@ article h3 {
 	font-size: 105%;
 	padding-bottom: .25em;
 }
+article img{
+	float: right;
+	
+}
 
 /* the styles for the aside */
 aside {
@@ -113,10 +123,11 @@ aside img {
 /* the styles for the footer */
 footer {
 	background-color: #931420;
+	clear:both;
 }
 footer p {
 	text-align: center;
 	color: white;
 	padding: 1em 0;
-	clear: both;
+	
 }
