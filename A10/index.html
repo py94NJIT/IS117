@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cookie Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    .cookie-box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 400px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body >
+  <div class="cookie-box">
+    <h2>Cookie Example</h2>
+    <p id="cookieDisplay"></p>
+  </div>
+
+  <script>
+    // Function to set a cookie
+    function setCookie(name, value, days) {
+      const d = new Date();
+      d.setTime(d.getTime() + (days*24*60*60*1000));
+      const expires = "expires=" + d.toUTCString();
+      document.cookie = name + "=" + value + ";" + expires + ";path=/";
+    }
+
+    // Function to get a cookie
+    function getCookie(name) {
+      const cname = name + "=";
+      const decodedCookie = decodeURIComponent(document.cookie);
+      const ca = decodedCookie.split(';');
+      for(let i = 0; i < ca.length; i++) {
+        let c = ca[i].trim();
+        if (c.indexOf(cname) == 0) {
+          return c.substring(cname.length, c.length);
+        }
+      }
+      return "";
+    }
+
+    // Set a cookie
+    setCookie("username", "Student123", 7);
+
+    // Display the cookie value
+    const user = getCookie("username");
+    if (user != "") {
+      document.getElementById("cookieDisplay").innerText = "Welcome back, " + user + "!";
+    } else {
+      document.getElementById("cookieDisplay").innerText = "No user cookie found.";
+    }
+  </script>
+</body>
+<footer style="text-align:center; padding: 20px; margin-top: 40px; background-color: #f1f1f1;">
+    <p>&copy; <span id="year"></span> 2025 Paul Yoo </p>
+  </footer>
+</html>
