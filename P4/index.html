@@ -1,8 +1,9 @@
+<!-- DEVELOPER: Paul Yoo. IS117-005, Spring 2025-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My First Bootstrap Page</title>
+    <title>Home</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
           rel="stylesheet"
@@ -20,7 +21,7 @@
                     col-12">
 
                 <!-- Brand -->
-                <a class="navbar-brand" href="#">Logo</a>
+                <a class="navbar-brand" href="index.html"> <img src="images/njit_logo.png" height = 50;></a>
                 <!-- Responsive Button for the smaller menu -->
                 <button class="navbar-toggler" type="button"
                         data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -29,55 +30,58 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav">
                         <!-- Links -->
+
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link 1</a>
+                            <a class="nav-link" href="contact.html">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link 2</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="about.html">About</a>
                         </li>
 
                         <!-- Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop"
+                        <li class="nav- item dropdown">
+                            <a class="nav-link dropdown-toggle" href="github.html" id="navbardrop"
                                data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Education
+                                Projects
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Link 1</a>
-                                <a class="dropdown-item" href="#">Link 2</a>
-                                <a class="dropdown-item" href="#">Link 3</a>
-                                <a class="dropdown-item" href="#">Link 4</a>
+                                <a class="dropdown-item" href="project1.html">Capstone Project</a>
+                                <a class="dropdown-item" href="#">Project 2</a>
+                                <a class="dropdown-item" href="#">Project 3</a>
                             </div>
                         </li>
                     </ul>
                 </div>
             </nav>
+    <div class="container-fluid mt-4">
+        <h1>Resume</h1>
         <div class="row">
-        <p class="col-1">Col 1</p>
-        <p class="col-1">Col 2</p>
-        <p class="col-1">Col 3</p>
-        <p class="col-1">Col 4</p>
-        <p class="col-1">Col 5</p>
-        <p class="col-1">Col 6</p>
-        <p class="col-1">Col 7</p>
-        <p class="col-1">Col 8</p>
-        <p class="col-1">Col 9</p>
-        <p class="col-1">Col 10</p>
-        <p class="col-1">Col 11</p>
-        <p class="col-1">Col 12</p>
+            <!-- Resume embed (left column) -->
+            <div class="col-md-8">
+                <embed src="documents/Resume_PaulYoo_2_2025.pdf" width="100%" height="1000px" />
+            </div>
+    
+            <!-- Bootstrap Card (right column) -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/profile.jfif" class="card-img-top" alt="Profile Picture">
+                    <div class="card-body">
+                        <h5 class="card-title">Connect with Me</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="https://www.linkedin.com/in/paul-yoo-438549158/">LinkedIn</a></li>
+                            <li><a href="https://github.com/py94NJIT">GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-    <div class="col-sm-4  text-center">
-        <h2>h2 Bootstrap heading (24px)</h2>
-        <h3>h2 Bootstrap heading (18px)</h3>
     </div>
+    
 </div>
  <footer class="footer page-footer font-small ">
      <div class="container">
         <div class="row">
-            <span class="text-muted">&copy; Art Hendela, 2021 |  Terms Of Use  |  Privacy Statement</span>
+            <span class="text-muted">&copy; Paul Yoo, 2025 |  Terms Of Use  |  Privacy Statement</span>
         </div>
      </div>
   </footer>
